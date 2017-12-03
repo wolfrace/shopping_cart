@@ -10,7 +10,7 @@ class ARule
 	: public IRule
 {
 protected:
-	IArticleSharedPtr GetArticle(std::map<IArticleSharedPtr, size_t> const& articles, constants::ArticleId const& id) const;
+	boost::optional<CArticle> GetArticle(ArticleStorage const& articles, constants::ArticleId const& id) const;
 };
 
 }

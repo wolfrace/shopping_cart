@@ -9,7 +9,7 @@ namespace impl
 namespace
 {
 
-void EraseArticles(std::map<IArticleSharedPtr, size_t> & articles, std::map<IArticleSharedPtr, size_t> const& erasable)
+void EraseArticles(ArticleStorage & articles, ArticleStorage const& erasable)
 {
 	for (auto& pair: erasable)
 	{
@@ -24,16 +24,16 @@ CCart::CCart(std::vector<IRuleUniquePtr> && rules)
 {
 }
 
-double CCart::GetTotal(std::map<IArticleSharedPtr, size_t> const& articles) const
+double CCart::GetTotal(ArticleStorage const& articles) const
 {
 	auto total = std::accumulate(articles.cbegin(), articles.cend(), 0., [](auto value, auto const& elem) {
-		return value + elem.second * elem.first->GetPrice();
+		return value + elem.second * elem.first.GetPrice();
 	});
 
 	return total;
 }
 
-void store::impl::CCart::AddArticle(IArticleSharedPtr const& article)
+void store::impl::CCart::AddArticle(CArticle const& article)
 {
 	m_articles[article] += 1;
 }

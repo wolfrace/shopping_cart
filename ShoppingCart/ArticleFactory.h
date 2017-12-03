@@ -1,5 +1,5 @@
 #pragma once
-#include "IArticle.h"
+#include "Article.h"
 
 namespace store
 {
@@ -7,7 +7,7 @@ namespace store
 class CArticleFactory
 {
 public:
-	static IArticleSharedPtr CreateArticle(constants::ArticleId const& id);
+	static CArticle CreateArticle(constants::ArticleId const& id);
 };
 
 }

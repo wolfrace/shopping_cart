@@ -15,7 +15,4 @@ public:
 
 using IArticleSharedPtr = std::shared_ptr<IArticle>;
 
-
-using ArticleStorage = std::map<IArticleSharedPtr, size_t>;
-
 }

@@ -15,6 +15,7 @@ namespace store
 
 store::ICartUniquePtr CCartFactory::CreateCart()
 {
+	boost::optional<int> p;
 	std::vector<IRuleUniquePtr> rules;
 
 	rules.emplace_back(std::make_unique<impl::CRule1>());

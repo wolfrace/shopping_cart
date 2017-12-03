@@ -13,7 +13,7 @@ constexpr auto discount = 0.05;
 
 }
 
-DiscountInfo CRule5::CalculateDiscount(std::map<IArticleSharedPtr, size_t> const& articles, double total) const
+DiscountInfo CRule5::CalculateDiscount(ArticleStorage const& articles, double total) const
 {
 	DiscountInfo discountInfo;
 
@@ -22,8 +22,8 @@ DiscountInfo CRule5::CalculateDiscount(std::map<IArticleSharedPtr, size_t> const
 	auto articleA = GetArticle(articles, constants::ArticleId::A);
 	auto articleC = GetArticle(articles, constants::ArticleId::C);
 
-	nArticles -= articleA != nullptr ? 1 : 0;
-	nArticles -= articleC != nullptr ? 1 : 0;
+	nArticles -= articleA ? 1 : 0;
+	nArticles -= articleC ? 1 : 0;
 
 	if (nArticles == 3)
 	{

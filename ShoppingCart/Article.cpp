@@ -3,8 +3,7 @@
 
 namespace store
 {
-namespace impl
-{
+
 CArticle::CArticle(constants::ArticleId id, double price)
 	: m_id(id)
 	, m_price(price)
@@ -26,5 +25,4 @@ double CArticle::GetPrice() const
 	return m_price;
 }
 
-}
 }

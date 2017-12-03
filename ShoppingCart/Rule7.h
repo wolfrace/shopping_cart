@@ -11,7 +11,7 @@ class CRule7
 	: public ARule
 {
 public:
-	DiscountInfo CalculateDiscount(std::map<IArticleSharedPtr, size_t> const& articles, double total) const final;
+	DiscountInfo CalculateDiscount(ArticleStorage const& articles, double total) const final;
 
 };
 

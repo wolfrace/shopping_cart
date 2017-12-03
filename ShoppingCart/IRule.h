@@ -1,5 +1,5 @@
 #pragma once
-#include "IArticle.h"
+#include "Article.h"
 
 namespace store
 {
@@ -7,7 +7,7 @@ namespace store
 struct DiscountInfo
 {
 	double discount = 0.;
-	std::map<IArticleSharedPtr, size_t /*count*/> discountedArticles;
+	ArticleStorage discountedArticles;
 };
 
 class IRule
@@ -15,7 +15,7 @@ class IRule
 public:
 	virtual ~IRule() = default;
 
-	virtual DiscountInfo CalculateDiscount(std::map<IArticleSharedPtr, size_t /*count*/> const& articles, double total) const = 0;
+	virtual DiscountInfo CalculateDiscount(ArticleStorage const& articles, double total) const = 0;
 };
 
 using IRuleUniquePtr = std::unique_ptr<IRule>;

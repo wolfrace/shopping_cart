@@ -14,16 +14,17 @@ class CCart
 public:
 	CCart(std::vector<IRuleUniquePtr> && rules);
 
-	void AddArticle(IArticleSharedPtr const& article) final;
+	void AddArticle(CArticle const& article) final;
+
 	double CalculateCost() const final;
 
 private:
-	double GetTotal(std::map<IArticleSharedPtr, size_t> const& articles) const;
+	double GetTotal(ArticleStorage const& articles) const;
 
 private:
 	std::vector<IRuleUniquePtr> m_rules;
 
-	std::map<IArticleSharedPtr, size_t> m_articles;
+	ArticleStorage m_articles;
 };
 
 }

@@ -12,6 +12,8 @@ bool AreSame(double a, double b)
 
 int main()
 {
+
+	// rule A&B test
 	{
 		using namespace store::constants;
 
@@ -28,8 +30,6 @@ int main()
 
 		total = cart->CalculateCost();
 		assert(AreSame(total, 6.4));
-
-		std::cout << total << std::endl;
 	}
 
     return 0;

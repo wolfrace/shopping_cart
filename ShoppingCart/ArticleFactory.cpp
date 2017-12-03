@@ -6,9 +6,9 @@
 namespace store
 {
 
-IArticleSharedPtr store::CArticleFactory::CreateArticle(constants::ArticleId const& id)
+CArticle store::CArticleFactory::CreateArticle(constants::ArticleId const& id)
 {
-	return std::make_shared<impl::CArticle>(id, constants::ArticlePrices.at(id));
+	return CArticle(id, constants::ArticlePrices.at(id));
 }
 
 }

@@ -9,7 +9,7 @@ class ICart
 public:
 	virtual ~ICart() = default;
 
-	virtual void AddArticle(IArticleSharedPtr const& article) = 0;
+	virtual void AddArticle(CArticle const& article) = 0;
 
 	virtual double CalculateCost() const = 0;
 	

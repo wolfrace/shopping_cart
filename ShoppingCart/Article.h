@@ -3,8 +3,6 @@
 
 namespace store
 {
-namespace impl
-{
 
 class CArticle
 	: public IArticle
@@ -22,5 +20,6 @@ private:
 	double m_price;
 };
 
-}
+using ArticleStorage = std::map<CArticle, size_t>;
+
 }
