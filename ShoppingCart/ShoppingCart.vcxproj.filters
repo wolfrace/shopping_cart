@@ -21,6 +21,9 @@
     <Filter Include="Sources\factories">
       <UniqueIdentifier>{5b1d5b61-d2ae-4d9e-ab36-8570fae79964}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Sources\implementation\rules">
+      <UniqueIdentifier>{a49bcd3f-282b-4907-b827-01dabe47d2b3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -56,6 +59,30 @@
     <ClInclude Include="ArticlePrices.h">
       <Filter>Sources\consts</Filter>
     </ClInclude>
+    <ClInclude Include="Rule1.h">
+      <Filter>Sources\implementation\rules</Filter>
+    </ClInclude>
+    <ClInclude Include="ARule.h">
+      <Filter>Sources\implementation\rules</Filter>
+    </ClInclude>
+    <ClInclude Include="Rule2.h">
+      <Filter>Sources\implementation\rules</Filter>
+    </ClInclude>
+    <ClInclude Include="Rule3.h">
+      <Filter>Sources\implementation\rules</Filter>
+    </ClInclude>
+    <ClInclude Include="Rule4.h">
+      <Filter>Sources\implementation\rules</Filter>
+    </ClInclude>
+    <ClInclude Include="Rule5.h">
+      <Filter>Sources\implementation\rules</Filter>
+    </ClInclude>
+    <ClInclude Include="Rule6.h">
+      <Filter>Sources\implementation\rules</Filter>
+    </ClInclude>
+    <ClInclude Include="Rule7.h">
+      <Filter>Sources\implementation\rules</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -72,6 +99,30 @@
     </ClCompile>
     <ClCompile Include="Article.cpp">
       <Filter>Sources\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="Rule1.cpp">
+      <Filter>Sources\implementation\rules</Filter>
+    </ClCompile>
+    <ClCompile Include="ARule.cpp">
+      <Filter>Sources\implementation\rules</Filter>
+    </ClCompile>
+    <ClCompile Include="Rule2.cpp">
+      <Filter>Sources\implementation\rules</Filter>
+    </ClCompile>
+    <ClCompile Include="Rule3.cpp">
+      <Filter>Sources\implementation\rules</Filter>
+    </ClCompile>
+    <ClCompile Include="Rule4.cpp">
+      <Filter>Sources\implementation\rules</Filter>
+    </ClCompile>
+    <ClCompile Include="Rule5.cpp">
+      <Filter>Sources\implementation\rules</Filter>
+    </ClCompile>
+    <ClCompile Include="Rule6.cpp">
+      <Filter>Sources\implementation\rules</Filter>
+    </ClCompile>
+    <ClCompile Include="Rule7.cpp">
+      <Filter>Sources\implementation\rules</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

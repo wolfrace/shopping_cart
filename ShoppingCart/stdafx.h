@@ -14,5 +14,8 @@
 #include <stdexcept>
 #include <vector>
 #include <map>
+#include <algorithm>
+#include <numeric>
+#include <assert.h>
 
 // TODO: reference additional headers your program requires here

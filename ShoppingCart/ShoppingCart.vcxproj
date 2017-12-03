@@ -150,9 +150,17 @@
     <ClInclude Include="ArticleFactory.h" />
     <ClInclude Include="ArticleIds.h" />
     <ClInclude Include="ArticlePrices.h" />
+    <ClInclude Include="ARule.h" />
     <ClInclude Include="IArticle.h" />
     <ClInclude Include="IRule.h" />
     <ClInclude Include="IShoppingCart.h" />
+    <ClInclude Include="Rule1.h" />
+    <ClInclude Include="Rule2.h" />
+    <ClInclude Include="Rule3.h" />
+    <ClInclude Include="Rule4.h" />
+    <ClInclude Include="Rule5.h" />
+    <ClInclude Include="Rule6.h" />
+    <ClInclude Include="Rule7.h" />
     <ClInclude Include="ShoppingCart.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
@@ -160,7 +168,15 @@
   <ItemGroup>
     <ClCompile Include="Article.cpp" />
     <ClCompile Include="ArticleFactory.cpp" />
+    <ClCompile Include="ARule.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Rule1.cpp" />
+    <ClCompile Include="Rule2.cpp" />
+    <ClCompile Include="Rule3.cpp" />
+    <ClCompile Include="Rule4.cpp" />
+    <ClCompile Include="Rule5.cpp" />
+    <ClCompile Include="Rule6.cpp" />
+    <ClCompile Include="Rule7.cpp" />
     <ClCompile Include="ShoppingCart.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
