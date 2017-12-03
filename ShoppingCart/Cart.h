@@ -1,17 +1,18 @@
 #pragma once
-#include "IShoppingCart.h"
+#include "ICart.h"
 #include "IRule.h"
+#include "Article.h"
 
 namespace store
 {
 namespace impl
 {
 
-class CShoppingCart
-	: public IShoppingCart
+class CCart
+	: public ICart
 {
 public:
-	CShoppingCart(std::vector<IRuleUniquePtr> && rules);
+	CCart(std::vector<IRuleUniquePtr> && rules);
 
 	void AddArticle(IArticleSharedPtr const& article) final;
 	double CalculateCost() const final;
@@ -21,6 +22,7 @@ private:
 
 private:
 	std::vector<IRuleUniquePtr> m_rules;
+
 	std::map<IArticleSharedPtr, size_t> m_articles;
 };
 

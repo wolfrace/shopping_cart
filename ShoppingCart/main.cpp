@@ -2,9 +2,35 @@
 //
 
 #include "stdafx.h"
+#include "ArticleFactory.h"
+#include "CartFactory.h"
 
+bool AreSame(double a, double b)
+{
+	return fabs(a - b) < 0.001;
+}
 
 int main()
 {
+	{
+		using namespace store::constants;
+
+		auto cart = store::CCartFactory::CreateCart();
+		cart->AddArticle(store::CArticleFactory::CreateArticle(ArticleId::A));
+		cart->AddArticle(store::CArticleFactory::CreateArticle(ArticleId::B));
+
+		auto total = cart->CalculateCost();
+		assert(AreSame(total, 2.7));
+
+		cart->AddArticle(store::CArticleFactory::CreateArticle(ArticleId::A));
+		cart->AddArticle(store::CArticleFactory::CreateArticle(ArticleId::B));
+		cart->AddArticle(store::CArticleFactory::CreateArticle(ArticleId::A));
+
+		total = cart->CalculateCost();
+		assert(AreSame(total, 6.4));
+
+		std::cout << total << std::endl;
+	}
+
     return 0;
 }

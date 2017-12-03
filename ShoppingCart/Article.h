@@ -12,6 +12,8 @@ class CArticle
 public:
 	CArticle(constants::ArticleId id, double price);
 
+	bool operator<(CArticle const& rhs) const;
+
 	constants::ArticleId GetId() const final;
 	double GetPrice() const final;
 

@@ -1,5 +1,5 @@
 #include "stdafx.h"
-#include "ShoppingCart.h"
+#include "Cart.h"
 
 namespace store
 {
@@ -19,12 +19,12 @@ void EraseArticles(std::map<IArticleSharedPtr, size_t> & articles, std::map<IArt
 
 }
 
-CShoppingCart::CShoppingCart(std::vector<IRuleUniquePtr> && rules)
+CCart::CCart(std::vector<IRuleUniquePtr> && rules)
 	: m_rules(std::move(rules))
 {
 }
 
-double CShoppingCart::GetTotal(std::map<IArticleSharedPtr, size_t> const& articles) const
+double CCart::GetTotal(std::map<IArticleSharedPtr, size_t> const& articles) const
 {
 	auto total = std::accumulate(articles.cbegin(), articles.cend(), 0., [](auto value, auto const& elem) {
 		return value + elem.second * elem.first->GetPrice();
@@ -33,12 +33,12 @@ double CShoppingCart::GetTotal(std::map<IArticleSharedPtr, size_t> const& articl
 	return total;
 }
 
-void store::impl::CShoppingCart::AddArticle(IArticleSharedPtr const& article)
+void store::impl::CCart::AddArticle(IArticleSharedPtr const& article)
 {
 	m_articles[article] += 1;
 }
 
-double store::impl::CShoppingCart::CalculateCost() const
+double store::impl::CCart::CalculateCost() const
 {
 	auto totalCost = GetTotal(m_articles);
 

@@ -6,7 +6,8 @@ namespace store
 
 class CArticleFactory
 {
-	IArticleSharedPtr CreateArticle(constants::ArticleId const& id) const;
+public:
+	static IArticleSharedPtr CreateArticle(constants::ArticleId const& id);
 };
 
 }

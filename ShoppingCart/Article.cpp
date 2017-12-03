@@ -11,6 +11,11 @@ CArticle::CArticle(constants::ArticleId id, double price)
 {
 }
 
+bool CArticle::operator<(CArticle const& rhs) const
+{
+	return m_id < rhs.m_id;
+}
+
 constants::ArticleId CArticle::GetId() const
 {
 	return m_id;

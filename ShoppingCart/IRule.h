@@ -6,7 +6,7 @@ namespace store
 
 struct DiscountInfo
 {
-	double discount;
+	double discount = 0.;
 	std::map<IArticleSharedPtr, size_t /*count*/> discountedArticles;
 };
 

@@ -38,12 +38,6 @@
     <ClInclude Include="IArticle.h">
       <Filter>Sources\interfaces</Filter>
     </ClInclude>
-    <ClInclude Include="IShoppingCart.h">
-      <Filter>Sources\interfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="ShoppingCart.h">
-      <Filter>Sources\implementation</Filter>
-    </ClInclude>
     <ClInclude Include="IRule.h">
       <Filter>Sources\interfaces</Filter>
     </ClInclude>
@@ -83,6 +77,15 @@
     <ClInclude Include="Rule7.h">
       <Filter>Sources\implementation\rules</Filter>
     </ClInclude>
+    <ClInclude Include="CartFactory.h">
+      <Filter>Sources\factories</Filter>
+    </ClInclude>
+    <ClInclude Include="ICart.h">
+      <Filter>Sources\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="Cart.h">
+      <Filter>Sources\implementation</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -90,9 +93,6 @@
     </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Support Files</Filter>
-    </ClCompile>
-    <ClCompile Include="ShoppingCart.cpp">
-      <Filter>Sources\implementation</Filter>
     </ClCompile>
     <ClCompile Include="ArticleFactory.cpp">
       <Filter>Sources\factories</Filter>
@@ -123,6 +123,12 @@
     </ClCompile>
     <ClCompile Include="Rule7.cpp">
       <Filter>Sources\implementation\rules</Filter>
+    </ClCompile>
+    <ClCompile Include="CartFactory.cpp">
+      <Filter>Sources\factories</Filter>
+    </ClCompile>
+    <ClCompile Include="Cart.cpp">
+      <Filter>Sources\implementation</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
