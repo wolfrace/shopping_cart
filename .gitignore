@@ -1,0 +1,43 @@
+# Ignore NuGet Packages
+*.nupkg
+
+# Ignore the packages folder
+**/packages/*
+
+# except build/, which is used as an MSBuild target.
+!**/packages/build/
+
+# Uncomment if necessary; generally it will be regenerated when needed
+#!**/packages/repositories.config
+
+# Ignore other intermediate files that NuGet might create
+project.json.lock
+*.nuget.props
+
+*.pyc
+*.sdf
+*.ipch
+*.opensdf
+*.user
+.idea
+/.project
+*.aps
+*.suo
+*.a
+*.o
+.vs/
+*.ncb
+*.i18nwsp
+*.i18ncache
+*.PVS-Studio.cfg
+*.cl.cfg
+*.cl.cmd
+*.map
+*_i.c
+*_p.c
+*_i.h
+*.VC.db
+*.VC.opendb
+.sass-cache/
+Debug
+Release

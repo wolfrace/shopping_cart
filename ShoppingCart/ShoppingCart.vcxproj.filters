@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Sources">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Support Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Sources\interfaces">
+      <UniqueIdentifier>{83c7087b-317e-4a53-a152-ce7ab5819750}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\implementation">
+      <UniqueIdentifier>{6aaa8db2-ea12-4814-a27e-2028f00f8d7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\consts">
+      <UniqueIdentifier>{4d42e75b-8e1b-4d62-842f-a9533079cdf1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sources\factories">
+      <UniqueIdentifier>{5b1d5b61-d2ae-4d9e-ab36-8570fae79964}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="targetver.h">
+      <Filter>Support Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Support Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IArticle.h">
+      <Filter>Sources\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="IShoppingCart.h">
+      <Filter>Sources\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="ShoppingCart.h">
+      <Filter>Sources\implementation</Filter>
+    </ClInclude>
+    <ClInclude Include="IRule.h">
+      <Filter>Sources\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="ArticleIds.h">
+      <Filter>Sources\consts</Filter>
+    </ClInclude>
+    <ClInclude Include="ArticleFactory.h">
+      <Filter>Sources\factories</Filter>
+    </ClInclude>
+    <ClInclude Include="Article.h">
+      <Filter>Sources\implementation</Filter>
+    </ClInclude>
+    <ClInclude Include="ArticlePrices.h">
+      <Filter>Sources\consts</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Support Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Support Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ShoppingCart.cpp">
+      <Filter>Sources\implementation</Filter>
+    </ClCompile>
+    <ClCompile Include="ArticleFactory.cpp">
+      <Filter>Sources\factories</Filter>
+    </ClCompile>
+    <ClCompile Include="Article.cpp">
+      <Filter>Sources\implementation</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
