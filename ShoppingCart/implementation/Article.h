@@ -1,5 +1,5 @@
 #pragma once
-#include "IArticle.h"
+#include "../interfaces/IArticle.h"
 
 namespace store
 {

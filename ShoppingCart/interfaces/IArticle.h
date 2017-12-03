@@ -1,5 +1,5 @@
 #pragma once
-#include "ArticleIds.h"
+#include "../consts/ArticleIds.h"
 
 namespace store
 {

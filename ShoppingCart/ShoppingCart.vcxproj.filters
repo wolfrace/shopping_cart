@@ -35,56 +35,56 @@
     <ClInclude Include="stdafx.h">
       <Filter>Support Files</Filter>
     </ClInclude>
-    <ClInclude Include="IArticle.h">
-      <Filter>Sources\interfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="IRule.h">
-      <Filter>Sources\interfaces</Filter>
-    </ClInclude>
-    <ClInclude Include="ArticleIds.h">
+    <ClInclude Include="consts\ArticleIds.h">
       <Filter>Sources\consts</Filter>
     </ClInclude>
-    <ClInclude Include="ArticleFactory.h">
-      <Filter>Sources\factories</Filter>
-    </ClInclude>
-    <ClInclude Include="Article.h">
-      <Filter>Sources\implementation</Filter>
-    </ClInclude>
-    <ClInclude Include="ArticlePrices.h">
+    <ClInclude Include="consts\ArticlePrices.h">
       <Filter>Sources\consts</Filter>
     </ClInclude>
-    <ClInclude Include="Rule1.h">
-      <Filter>Sources\implementation\rules</Filter>
-    </ClInclude>
-    <ClInclude Include="ARule.h">
-      <Filter>Sources\implementation\rules</Filter>
-    </ClInclude>
-    <ClInclude Include="Rule2.h">
-      <Filter>Sources\implementation\rules</Filter>
-    </ClInclude>
-    <ClInclude Include="Rule3.h">
-      <Filter>Sources\implementation\rules</Filter>
-    </ClInclude>
-    <ClInclude Include="Rule4.h">
-      <Filter>Sources\implementation\rules</Filter>
-    </ClInclude>
-    <ClInclude Include="Rule5.h">
-      <Filter>Sources\implementation\rules</Filter>
-    </ClInclude>
-    <ClInclude Include="Rule6.h">
-      <Filter>Sources\implementation\rules</Filter>
-    </ClInclude>
-    <ClInclude Include="Rule7.h">
-      <Filter>Sources\implementation\rules</Filter>
-    </ClInclude>
-    <ClInclude Include="CartFactory.h">
+    <ClInclude Include="factories\ArticleFactory.h">
       <Filter>Sources\factories</Filter>
     </ClInclude>
-    <ClInclude Include="ICart.h">
+    <ClInclude Include="factories\CartFactory.h">
+      <Filter>Sources\factories</Filter>
+    </ClInclude>
+    <ClInclude Include="implementation\rules\ARule.h">
+      <Filter>Sources\implementation\rules</Filter>
+    </ClInclude>
+    <ClInclude Include="implementation\rules\Rule1.h">
+      <Filter>Sources\implementation\rules</Filter>
+    </ClInclude>
+    <ClInclude Include="implementation\rules\Rule2.h">
+      <Filter>Sources\implementation\rules</Filter>
+    </ClInclude>
+    <ClInclude Include="implementation\rules\Rule3.h">
+      <Filter>Sources\implementation\rules</Filter>
+    </ClInclude>
+    <ClInclude Include="implementation\rules\Rule4.h">
+      <Filter>Sources\implementation\rules</Filter>
+    </ClInclude>
+    <ClInclude Include="implementation\rules\Rule5.h">
+      <Filter>Sources\implementation\rules</Filter>
+    </ClInclude>
+    <ClInclude Include="implementation\rules\Rule6.h">
+      <Filter>Sources\implementation\rules</Filter>
+    </ClInclude>
+    <ClInclude Include="implementation\rules\Rule7.h">
+      <Filter>Sources\implementation\rules</Filter>
+    </ClInclude>
+    <ClInclude Include="implementation\Article.h">
+      <Filter>Sources\implementation</Filter>
+    </ClInclude>
+    <ClInclude Include="implementation\Cart.h">
+      <Filter>Sources\implementation</Filter>
+    </ClInclude>
+    <ClInclude Include="interfaces\IArticle.h">
       <Filter>Sources\interfaces</Filter>
     </ClInclude>
-    <ClInclude Include="Cart.h">
-      <Filter>Sources\implementation</Filter>
+    <ClInclude Include="interfaces\ICart.h">
+      <Filter>Sources\interfaces</Filter>
+    </ClInclude>
+    <ClInclude Include="interfaces\IRule.h">
+      <Filter>Sources\interfaces</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -94,40 +94,40 @@
     <ClCompile Include="main.cpp">
       <Filter>Support Files</Filter>
     </ClCompile>
-    <ClCompile Include="ArticleFactory.cpp">
+    <ClCompile Include="factories\ArticleFactory.cpp">
       <Filter>Sources\factories</Filter>
     </ClCompile>
-    <ClCompile Include="Article.cpp">
+    <ClCompile Include="factories\CartFactory.cpp">
+      <Filter>Sources\factories</Filter>
+    </ClCompile>
+    <ClCompile Include="implementation\rules\ARule.cpp">
+      <Filter>Sources\implementation\rules</Filter>
+    </ClCompile>
+    <ClCompile Include="implementation\rules\Rule1.cpp">
+      <Filter>Sources\implementation\rules</Filter>
+    </ClCompile>
+    <ClCompile Include="implementation\rules\Rule2.cpp">
+      <Filter>Sources\implementation\rules</Filter>
+    </ClCompile>
+    <ClCompile Include="implementation\rules\Rule3.cpp">
+      <Filter>Sources\implementation\rules</Filter>
+    </ClCompile>
+    <ClCompile Include="implementation\rules\Rule4.cpp">
+      <Filter>Sources\implementation\rules</Filter>
+    </ClCompile>
+    <ClCompile Include="implementation\rules\Rule5.cpp">
+      <Filter>Sources\implementation\rules</Filter>
+    </ClCompile>
+    <ClCompile Include="implementation\rules\Rule6.cpp">
+      <Filter>Sources\implementation\rules</Filter>
+    </ClCompile>
+    <ClCompile Include="implementation\rules\Rule7.cpp">
+      <Filter>Sources\implementation\rules</Filter>
+    </ClCompile>
+    <ClCompile Include="implementation\Article.cpp">
       <Filter>Sources\implementation</Filter>
     </ClCompile>
-    <ClCompile Include="Rule1.cpp">
-      <Filter>Sources\implementation\rules</Filter>
-    </ClCompile>
-    <ClCompile Include="ARule.cpp">
-      <Filter>Sources\implementation\rules</Filter>
-    </ClCompile>
-    <ClCompile Include="Rule2.cpp">
-      <Filter>Sources\implementation\rules</Filter>
-    </ClCompile>
-    <ClCompile Include="Rule3.cpp">
-      <Filter>Sources\implementation\rules</Filter>
-    </ClCompile>
-    <ClCompile Include="Rule4.cpp">
-      <Filter>Sources\implementation\rules</Filter>
-    </ClCompile>
-    <ClCompile Include="Rule5.cpp">
-      <Filter>Sources\implementation\rules</Filter>
-    </ClCompile>
-    <ClCompile Include="Rule6.cpp">
-      <Filter>Sources\implementation\rules</Filter>
-    </ClCompile>
-    <ClCompile Include="Rule7.cpp">
-      <Filter>Sources\implementation\rules</Filter>
-    </ClCompile>
-    <ClCompile Include="CartFactory.cpp">
-      <Filter>Sources\factories</Filter>
-    </ClCompile>
-    <ClCompile Include="Cart.cpp">
+    <ClCompile Include="implementation\Cart.cpp">
       <Filter>Sources\implementation</Filter>
     </ClCompile>
   </ItemGroup>
