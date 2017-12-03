@@ -27,6 +27,9 @@ DiscountInfo CRule5::CalculateDiscount(ArticleStorage const& articles, double to
 
 	if (nArticles == 3)
 	{
+		total -= articleA ? articleA->GetPrice() * articles.at(*articleA) : 0;
+		total -= articleC ? articleC->GetPrice() * articles.at(*articleC) : 0;
+
 		discountInfo.discount = total * discount;
 	}
 

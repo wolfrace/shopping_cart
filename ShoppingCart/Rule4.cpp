@@ -24,7 +24,7 @@ DiscountInfo CRule4::CalculateDiscount(ArticleStorage const& articles, double /*
 	auto articleM = GetArticle(articles, constants::ArticleId::M);
 
 	if (articleA && 
-		articleK || articleL || articleM)
+		(articleK || articleL || articleM))
 	{
 		discountInfo.discountedArticles[*articleA] = 1;
 
@@ -48,7 +48,7 @@ DiscountInfo CRule4::CalculateDiscount(ArticleStorage const& articles, double /*
 		}
 		else if(articleM)
 		{
-			auto discountM = articleL->GetPrice() * discount;
+			auto discountM = articleM->GetPrice() * discount;
 			if (discountInfo.discount < discountM)
 			{
 				discountInfo.discount = discountM;

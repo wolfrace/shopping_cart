@@ -12,8 +12,9 @@ boost::optional<CArticle> ARule::GetArticle(ArticleStorage const& articles, cons
 		return elem.first.GetId() == id;
 	});
 
-	if (it != articles.cend() && it->second > 0)
+	if (it != articles.cend())
 	{
+		assert(it->second > 0);
 		return it->first;
 	}
 	else

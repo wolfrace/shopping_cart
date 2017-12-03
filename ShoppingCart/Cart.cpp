@@ -14,6 +14,10 @@ void EraseArticles(ArticleStorage & articles, ArticleStorage const& erasable)
 	for (auto& pair: erasable)
 	{
 		articles.at(pair.first) -= pair.second;
+		if (articles.at(pair.first) == 0)
+		{
+			articles.erase(pair.first);
+		}
 	}
 }
 
@@ -46,7 +50,7 @@ double store::impl::CCart::CalculateCost() const
 	for (auto& rule: m_rules)
 	{
 		const auto total = GetTotal(notDiscountedArticles);
-		auto discountInfo = rule->CalculateDiscount(m_articles, total);
+		auto discountInfo = rule->CalculateDiscount(notDiscountedArticles, total);
 
 		if (discountInfo.discount > 0)
 		{
