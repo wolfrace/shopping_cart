@@ -13,9 +13,9 @@ constexpr auto discount = 0.05;
 
 }
 
-double CRule4::GetDiscount(std::map<IArticleSharedPtr, size_t> const& articles, double /*total*/) const
+DiscountInfo CRule4::CalculateDiscount(std::map<IArticleSharedPtr, size_t> const& articles, double /*total*/) const
 {
-	double total = 0;
+	DiscountInfo discountInfo;
 
 	auto articleA = GetArticle(articles, constants::ArticleId::A);
 
@@ -26,21 +26,38 @@ double CRule4::GetDiscount(std::map<IArticleSharedPtr, size_t> const& articles, 
 	if (articleA != nullptr && 
 		articleK != nullptr || articleL != nullptr || articleM != nullptr)
 	{
+		discountInfo.discountedArticles[articleA] = 1;
+
 		if (articleK != nullptr)
 		{
-			total = std::max(total, articleK->GetPrice() * discount);
+			auto discountK = articleK->GetPrice() * discount;
+			if (discountInfo.discount < discountK)
+			{
+				discountInfo.discount = discountK;
+				discountInfo.discountedArticles[articleK] = 1;
+			}
 		}
 		if (articleL != nullptr)
 		{
-			total = std::max(total, articleL->GetPrice() * discount);
+			auto discountL = articleL->GetPrice() * discount;
+			if (discountInfo.discount < discountL)
+			{
+				discountInfo.discount = discountL;
+				discountInfo.discountedArticles[articleL] = 1;
+			}
 		}
 		else if(articleM != nullptr)
 		{
-			total = std::max(total, articleM->GetPrice() * discount);
+			auto discountM = articleL->GetPrice() * discount;
+			if (discountInfo.discount < discountM)
+			{
+				discountInfo.discount = discountM;
+				discountInfo.discountedArticles[articleM] = 1;
+			}
 		}
 	}
 
-	return total;
+	return discountInfo;
 }
 
 }

@@ -12,7 +12,7 @@ store::IArticleSharedPtr ARule::GetArticle(std::map<IArticleSharedPtr, size_t> c
 		return elem.first->GetId() == id;
 	});
 
-	if (it != articles.cend())
+	if (it != articles.cend() && it->second > 0)
 	{
 		return it->first;
 	}

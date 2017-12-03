@@ -13,9 +13,9 @@ constexpr auto discount = 0.05;
 
 }
 
-double CRule3::GetDiscount(std::map<IArticleSharedPtr, size_t> const& articles, double /*total*/) const
+DiscountInfo CRule3::CalculateDiscount(std::map<IArticleSharedPtr, size_t> const& articles, double /*total*/) const
 {
-	double total = 0;
+	DiscountInfo discountInfo;
 
 	auto articleE = GetArticle(articles, constants::ArticleId::E);
 	auto articleF = GetArticle(articles, constants::ArticleId::F);
@@ -25,12 +25,16 @@ double CRule3::GetDiscount(std::map<IArticleSharedPtr, size_t> const& articles, 
 	{
 		size_t nPair = std::min(std::min(articles.at(articleE), articles.at(articleF)), articles.at(articleG));
 
-		total += articleE->GetPrice() * nPair * discount;
-		total += articleF->GetPrice() * nPair * discount;
-		total += articleG->GetPrice() * nPair * discount;
+		discountInfo.discount += articleE->GetPrice() * nPair * discount;
+		discountInfo.discount += articleF->GetPrice() * nPair * discount;
+		discountInfo.discount += articleG->GetPrice() * nPair * discount;
+
+		discountInfo.discountedArticles[articleE] = nPair;
+		discountInfo.discountedArticles[articleF] = nPair;
+		discountInfo.discountedArticles[articleG] = nPair;
 	}
 
-	return total;
+	return discountInfo;
 }
 
 }

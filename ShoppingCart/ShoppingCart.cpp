@@ -6,6 +6,19 @@ namespace store
 namespace impl
 {
 
+namespace
+{
+
+void EraseArticles(std::map<IArticleSharedPtr, size_t> & articles, std::map<IArticleSharedPtr, size_t> const& erasable)
+{
+	for (auto& pair: erasable)
+	{
+		articles.at(pair.first) -= pair.second;
+	}
+}
+
+}
+
 CShoppingCart::CShoppingCart(std::vector<IRuleUniquePtr> && rules)
 	: m_rules(std::move(rules))
 {
@@ -27,21 +40,24 @@ void store::impl::CShoppingCart::AddArticle(IArticleSharedPtr const& article)
 
 double store::impl::CShoppingCart::CalculateCost() const
 {
-	auto total = GetTotal(m_articles);
+	auto totalCost = GetTotal(m_articles);
 
+	auto notDiscountedArticles = m_articles;
 	for (auto& rule: m_rules)
 	{
-		auto discount = rule->GetDiscount(m_articles, total);
-		assert(discount <= total);
+		const auto total = GetTotal(notDiscountedArticles);
+		auto discountInfo = rule->CalculateDiscount(m_articles, total);
 
-		if (discount > 0)
+		if (discountInfo.discount > 0)
 		{
-			total -= discount;
-			break; // rule is activated
+			totalCost -= discountInfo.discount;
+			EraseArticles(notDiscountedArticles, discountInfo.discountedArticles);
 		}
 	}
 
-	return total;
+	assert(totalCost > 0);
+
+	return totalCost;
 }
 
 }

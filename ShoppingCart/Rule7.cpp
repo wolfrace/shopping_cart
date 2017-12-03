@@ -13,9 +13,9 @@ constexpr auto discount = 0.2;
 
 }
 
-double CRule7::GetDiscount(std::map<IArticleSharedPtr, size_t> const& articles, double total) const
+DiscountInfo CRule7::CalculateDiscount(std::map<IArticleSharedPtr, size_t> const& articles, double total) const
 {
-	double result = 0;
+	DiscountInfo discountInfo;
 
 	size_t nArticles = articles.size();
 
@@ -27,10 +27,10 @@ double CRule7::GetDiscount(std::map<IArticleSharedPtr, size_t> const& articles, 
 
 	if (nArticles >= 5)
 	{
-		result = total * discount;
+		discountInfo.discount = total * discount;
 	}
 
-	return result;
+	return discountInfo;
 }
 
 }
